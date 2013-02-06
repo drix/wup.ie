@@ -1,0 +1,29 @@
+{% extends 'DrixWUP::layout.html.twig' %}
+
+{% block title %}What's UP?{% endblock %}
+
+{% block content %}
+	<section class="index">
+		<div id="form" class="loading">
+			<div id="logo"><img src="{{ asset('images/logo.jpg') }}" alt="What's UP?" /></div>
+			
+			<label for="q">Enter your search</label>
+			<input id="q" name="q" type="text" value="" placeholder="I want to know about..."/>
+			
+			<button id="search" disabled="disabled">Q</button>
+			
+			
+			<label id="query"></label>
+			<button id="reset">change</button>
+			
+			<progress>loading</progress>
+		</div>
+		
+		<nav id="result"></nav>
+	</section>
+{% endblock %}
+
+
+{% block templates %}
+
+{% endblock %}

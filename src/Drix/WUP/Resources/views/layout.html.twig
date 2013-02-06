@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}What's UP?{% endblock %}</title>
+        <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />		
+		
+		{% include "DrixWUP::stylesheets.html.twig" %}
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+		
+		{% include "DrixWUP::templates.html.twig" %}
+		
+		{% include "DrixWUP::javascripts.html.twig" %}
+    </body>
+</html>

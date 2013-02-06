@@ -1,0 +1,4 @@
+# src/Drix/WUP/Resources/config/routing.yml
+index:
+    pattern:  /
+    defaults: { _controller: DrixWUP:Index:index }

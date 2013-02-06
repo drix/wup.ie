@@ -1,0 +1,28 @@
+<script async="" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+{% block javascripts %}
+
+	{% javascripts 
+		"@DrixWUP/Resources/public/js/libs/*" 
+	output='js/min/lib.min.js'%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts  %}
+	
+	{% javascripts 
+		"@DrixWUP/Resources/public/js/utils/*" 
+	output='js/min/utils.min.js'%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts  %}
+	
+	{% javascripts 
+		"@DrixWUP/Resources/public/js/models/*" 
+		"@DrixWUP/Resources/public/js/views/*" 
+	output='js/min/main.min.js'%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts  %}
+	
+	{% javascripts 
+		"@DrixWUP/Resources/public/js/app.js" 
+	output='js/min/app.min.js'%}
+		<script src="{{ asset_url }}"></script>
+	{% endjavascripts  %}
+{% endblock javascripts %}
