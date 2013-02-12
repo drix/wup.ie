@@ -18,9 +18,7 @@ App.views.Map = Backbone.View.extend({
 		MQA.withModule('largezoom', $.proxy(function() {
 			this.addControl( new MQA.LargeZoom(), new MQA.MapCornerPlacement(MQA.MapCorner.TOP_RIGHT, new MQA.Size(5,5)));
 		}, this.mqa));
-		MQA.withModule('mousewheel', $.proxy(function() { this.enableMouseWheelZoom(); }, this.mqa));
-		//auto resize map
-		$(window).on('resize',function(){$('#map').children(0).height($(window).height());})
+		MQA.withModule('mousewheel', $.proxy(function() { this.enableMouseWheelZoom(); }, this.mqa));		
 	},
 	onLocation: function(geo){ 
 		this.latitude  = geo.coords.latitude;
